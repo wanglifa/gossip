@@ -7,15 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        body{
+            background-color: #eee;
+        }
         #yin-yang{
             width: 96px;
             height: 48px;
+            margin: 0 auto;
             background: #fff;
             border-color: black;
             border-style: solid;
             border-width:2px 2px 50px 2px;
             position: relative;
             border-radius: 50%;
+            animation:ani 3s linear infinite;
+
         }
         #yin-yang:before{
             content: '';
@@ -40,9 +46,21 @@
             top: 50%;
             border-radius: 50%;
         }
+        @keyframes ani{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        p{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <div id="yin-yang"></div>
+<p>道生一，一生二，二生三，三生万物</p>
 </body>
 </html>
